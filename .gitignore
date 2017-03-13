@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Misc
+cifar-10-batches-py/
+cifar-10-python.tar.gz
+*.p
+.idea/
