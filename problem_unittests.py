@@ -128,6 +128,7 @@ def test_nn_keep_prob_inputs(neural_net_keep_prob_input):
 
 
 def test_con_pool(conv2d_maxpool):
+    print("********Testing conv and max pool layer********")
     test_x = tf.placeholder(tf.float32, [None, 32, 32, 5])
     test_num_outputs = 10
     test_con_k = (2, 2)
@@ -144,6 +145,7 @@ def test_con_pool(conv2d_maxpool):
 
 
 def test_flatten(flatten):
+    print("********Testing flatten layer********")
     test_x = tf.placeholder(tf.float32, [None, 10, 30, 6])
     flat_out = flatten(test_x)
 
@@ -154,6 +156,7 @@ def test_flatten(flatten):
 
 
 def test_fully_conn(fully_conn):
+    print("********Testing fully conntected layer********")
     test_x = tf.placeholder(tf.float32, [None, 128])
     test_num_outputs = 40
 
@@ -166,6 +169,7 @@ def test_fully_conn(fully_conn):
 
 
 def test_output(output):
+    print("********Testing output layer********")
     test_x = tf.placeholder(tf.float32, [None, 128])
     test_num_outputs = 40
 
@@ -178,6 +182,7 @@ def test_output(output):
 
 
 def test_conv_net(conv_net):
+    print("********Testing conv net********")
     test_x = tf.placeholder(tf.float32, [None, 32, 32, 3])
     test_k = tf.placeholder(tf.float32)
 
@@ -190,6 +195,7 @@ def test_conv_net(conv_net):
 
 
 def test_train_nn(train_neural_network):
+    print("********Testing training network********")
     mock_session = tf.Session()
     test_x = np.random.rand(128, 32, 32, 3)
     test_y = np.random.rand(128, 10)
