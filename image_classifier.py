@@ -267,7 +267,7 @@ def print_stats(session, feature_batch, label_batch, cost, accuracy):
     : accuracy: TensorFlow accuracy function
     """
     each_accuracy = session.run(accuracy, feed_dict={x: feature_batch, y: label_batch, keep_prob: keep_probability})
-    cost_val = session.run(cost, feed_dict={x: feature_batch, y: label_batch, keep_prob: keep_probability})
+    cost_val = session.run(cost, feed_dict={x: feature_batch, y: label_batch, keep_prob: 1.0})
     print("Validation Accuracy = {:.3f}".format(each_accuracy))
     print("cost = {:.3f}".format(cost_val))
 
